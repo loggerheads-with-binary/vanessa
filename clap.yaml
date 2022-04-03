@@ -1,0 +1,77 @@
+name: vanessa
+version: "2.0.0"
+author:  "Aniruddh Anna<@aniruddh.iitb.92@protonmail.com> and Vanessa Doofenshmirtz"
+about: "\nCreates command line notifications for several callers of the Quagmire System Control.\nWritten in Rust, made with love\nNow with more sophisticated icon management system.\n\nAs a good practice, invoke `vanessa`/`notif_s` for help/stdout output. And `notif`/`vanessa-d`/`vanessa_d` for background executable"
+
+args:
+    - prog :
+        short: p
+        long: prog
+        value_name: PROGRAM
+        help: Which program is notif being called from.
+        takes_value: true
+        default_value: "Anonymous Program"
+
+    - title :
+        short: t
+        long: title
+        value_name : TITLE
+        help : Title of the notification to be sent
+        takes_value : true
+        default_value : "Standard Notification"
+
+    - message :
+        short : m
+        long : message
+        value_name : MESSAGE
+        help : Message of the notification to be sent
+        takes_value : true
+        default_value : "A Message from an anonymous program"
+
+    - icon :
+        short : i
+        long : icon
+        value_name : ICON
+        help : Icon to be used in toast notification
+        takes_value : true
+        default_value : ""
+
+    - wait_period :
+        short : w
+        long: wait_period
+        value_name : WAIT_PERIOD
+        help : "How Long to wait before creating toast"
+        takes_value : true
+        default_value : "0"
+
+    - reminder_sleep :
+        short : r
+        long: reminder_var
+        value_name : REMINDER_VAR
+        takes_value : true
+        help : How long to wait before reminding once again
+        default_value : "0"
+
+    - duration :
+        short : d
+        long : duration
+        value_name : DURATION
+        takes_value : true
+        help : Duration of each notification toast
+        default_value : "5"
+
+    - snooze_count :
+        short: s
+        long : snooze_var
+        value_name : SNOOZE_VAR
+        help : No of snoozes
+        takes_value : true
+        default_value : "0"
+
+    - persist :
+        short : P
+        long: persist
+        value_name : <persist-notification>
+        takes_value : false
+        help : Should the notification persist
+        required: false

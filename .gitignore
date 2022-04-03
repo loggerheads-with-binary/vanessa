@@ -1,0 +1,6 @@
+target/
+final_exes/
+media/* 
+#media_icon/*
+**/*.csv
+Cargo.lock

@@ -1,0 +1,22 @@
+[package]
+name = "vanessa"
+version = "1.7.19"
+authors = ["@Aniruddh Anna" , "@tzuyus_thighs_save_lives"]
+
+
+[dependencies]
+lazy_static = "*"
+clap = { version = "2.33.0", features = ["yaml"] }
+chrono = "*"
+rand = "0.3.0"
+glob = "*"
+cute = "*"
+log = "*"
+simple_logger = { version = "1.13.0" , features = ["stderr"]}
+json = "*"
+
+[target.'cfg(unix)'.dependencies]
+notify-rust = "4"
+
+[target.'cfg(windows)'.dependencies]
+winrt-notification = "0.2.4"
